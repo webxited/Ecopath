@@ -1,6 +1,14 @@
 from .base import *
+import environ
+from pathlib import Path
+import os
 
-DEBUG = False
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
+print(BASE_DIR)
+env=environ.Env()
+environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
+
+DEBUG = env("DEBUG")
 
 ALLOWED_HOSTS = ["*"]
 
