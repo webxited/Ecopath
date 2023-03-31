@@ -1,15 +1,17 @@
 from .base import *
-import environ
-from pathlib import Path
-import os
-
-BASE_DIR = Path(__file__).resolve().parent.parent.parent
-print(BASE_DIR)
-env=environ.Env()
-environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = env("DEBUG")
+DEBUG = True
+
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'resortapp',
+]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
