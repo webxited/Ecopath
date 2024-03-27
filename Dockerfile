@@ -20,7 +20,6 @@ WORKDIR /code
 # Install dependencies
 COPY requirements.txt /code
 RUN pip install -r requirements.txt
-RUN pip install gunicorn
 # Copy the current directory into the container at /code/Travans
 COPY . /code
 
