@@ -16,7 +16,10 @@ INSTALLED_APPS = [
     'resortapp',
 ]
 
-CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOWED_ORIGINS = [
+    "https://ecopathresort.com",
+    # Add other allowed origins here
+]
 CORS_ALLOW_CREDENTIALS = True
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
