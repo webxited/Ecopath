@@ -29,5 +29,10 @@ MIDDLEWARE = [
 
 CORS_ALLOW_ALL_ORIGINS = True
 CSRF_COOKIE_SECURE = True
+CSRF_TRUSTED_ORIGINS = [
+    'https://ecopathresort.com',
+    'http://ecopathresort.com',
+    'ecopathresort.com',
+]
 CORS_ALLOW_CREDENTIALS = True
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
