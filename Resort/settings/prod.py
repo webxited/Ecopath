@@ -15,12 +15,6 @@ INSTALLED_APPS = [
     'whitenoise.runserver_nostatic',
     'resortapp',
 ]
-
-CORS_ALLOWED_ORIGINS = [
-    "https://ecopathresort.com",
-    # Add other allowed origins here
-]
-CORS_ALLOW_CREDENTIALS = True
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "whitenoise.middleware.WhiteNoiseMiddleware",
@@ -33,4 +27,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+CORS_ALLOW_ALL_ORIGINS = True
+CSRF_COOKIE_SECURE = True
+CORS_ALLOW_CREDENTIALS = True
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
